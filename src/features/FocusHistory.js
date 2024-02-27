@@ -4,7 +4,7 @@ import { fontSizes, spacing } from '../utils/sizes';
 export const FoucsHistory = ({ history }) => {
   const renderItem = ({ item }) => <Text style={styles.item}>- {item}</Text>;
   if (!history || !history.length)
-    return <Text style={styles.motivationalQuote}>We've not focused on anything yet.</Text>;
+    return <Text style={styles.container}>We've not focused on anything yet !</Text>;
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Things we've focused on: </Text>
@@ -16,6 +16,9 @@ export const FoucsHistory = ({ history }) => {
 const styles = StyleSheet.create({
   container: {
     padding: spacing.md,
+    color: colors.white,
+    fontWeight: 'bold',
+    fontSize: fontSizes.md
   },
   item: {
     color: colors.white,
@@ -25,11 +28,5 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontSize: fontSizes.md,
     fontWeight: 'bold',
-  },
-  motivationalQuote: {
-    color: colors.white,
-    fontSize: fontSizes.md,
-    fontWeight: 'bold',
-    textAlign: 'center'
   },
 });
